@@ -16,9 +16,10 @@ for n = [10, 20]
     hold off;
     
     % calc interpolation error
+    figure
     y_real = sin(x);
-    err = norm(y - y_real);
-    disp(['n = ', num2str(n), ': sin(x) error = ', num2str(err)]);
+    diff = abs(y_real - y);
+    plot(x, diff);   
 end
     
 
@@ -38,8 +39,9 @@ for n = [10, 20]
     plot(x, y);
     hold off;
     
-     % calc interpolation error
+    % calc interpolation error
+    figure
     y_real = 1 ./ (x .* x + 1);
-    err = norm(y - y_real);
-    disp(['n = ', num2str(n), ': R(x) error = ', num2str(err)]);
+    diff = abs(y_real - y);
+    plot(x, diff);    
 end
