@@ -1,9 +1,6 @@
 % value of n = 10 and n = 20.
-n_array = [10 20];
-
-for i = 1:2
+for n = [10 20]
     %  nodes xi are equally spaced on the interval with x0 = ?5 and xn = 5.
-    n = n_array(i);
     xi = linspace(-5, 5, n);
     fi = sin(xi);
     
@@ -25,9 +22,8 @@ for i = 1:2
 end
     
 
-for i = 1:2
-    %  nodes xi are equally spaced on the interval with x0 = ?5 and xn = 5.
-    n = n_array(i);
+for n = [10 20]
+    %  nodes xi are equally spaced on the interval with x0 = ?5 and xn = 5.    
     xi = linspace(-5, 5, n);
     fi = 1 ./ (xi .* xi + 1);
     

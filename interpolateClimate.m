@@ -10,9 +10,9 @@ hold on;
 plot(xi, fi, 'o');
 hold off;
 
-x_data = [1903 1941 1963 1969 1976 1989 1999 2009];
+x_data = [1903 1941 1963 1969 1976 1989 1999];
 y_pred = Lagrange(xi, fi, x_data)
-y_real = [56.71 57.40 57.25 57.20 56.79 57.69 57.97 58.50];
+y_real = [56.71 57.40 57.25 57.20 56.79 57.69 57.97];
 
 err = norm(y_pred - y_real);
 disp(['Interpolation error = ', num2str(err)]);
